@@ -1,0 +1,96 @@
+#
+# wm independent hotkeys
+#
+mod4 + Escape
+    pkill -USR1 -x sxhkd
+
+mod4 + t
+	$TERMINAL
+
+mod4 + {_,shift + }f
+	$BROWSER {_,--private-window}
+
+mod4 + semicolon
+	dmenu_run
+
+mod4 + p
+	GTK_THEME=Materia:dark pavucontrol
+
+#
+# bspwm hotkeys
+#
+
+# quit/restart bspwm
+mod4 + alt + {q,r}
+	bspc {quit,wm -r}
+
+# close and kill
+mod4 + {_,shift + }d
+	bspc node -{c,k}
+
+# alternate between the tiled and monocle layout
+mod4 + m
+	bspc desktop -l next
+
+# swap the current node and the biggest node
+mod4 + Return
+	bspc node -s biggest.local
+
+mod4 + space
+	bspc node -s next.local
+
+
+#
+# state/flags
+#
+
+# set the window state
+mod4 + {x, c, v, b}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# focus/swap
+#
+
+# focus the node in the given direction
+mod4 + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus or send to the given desktop
+mod4 + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+mod4 + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+mod4 + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused node
+mod4 + ctrl + space
+	bspc node -p cancel
+
+# cancel the preselection for the focused desktop
+mod4 + ctrl + shift + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+# expand a window by moving one of its side outward
+mod4 + {y,u,i,o}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+# contract a window by moving one of its side inward
+mod4 + shift + {y,u,i,o}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+mod4 + alt + {h,j,k,l}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
