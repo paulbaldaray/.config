@@ -1,4 +1,2 @@
-feh --bg-scale $HOME/Pictures/karasuno.png
-picom &
-sxhkd &
+$HOME/.config/autostart.sh
 exec bspwm
