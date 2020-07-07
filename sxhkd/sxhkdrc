@@ -15,10 +15,13 @@ mod4 + semicolon
 mod4 + v
 	pavucontrol
 
+mod4 + e
+	emacs
+
 # bspwm hotkeys
 
 # floating
-button2
+mod4 + button2
 	state=floating;\
 	bspc query -N focused.floating && state=tiled;\
 	bspc node -t "$state"
@@ -27,7 +30,6 @@ mod4 + m
 	state=floating;\
 	bspc query -N focused.floating && state=tiled;\
 	bspc node -t "$state"
-
 
 # quit/restart bspwm
 mod4 + shift + {q,r}
