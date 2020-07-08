@@ -57,5 +57,8 @@ mod4 + {h,l}
 mod4 + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+mod4 + Tab
+	bspc desktop -f next.occupied
+
 mod4 + z
 	bspc node -t ~fullscreen
