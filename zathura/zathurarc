@@ -3,4 +3,3 @@ set recolor-darkcolor "#f2e5bc"
 
 set recolor
 map <C-i> recolor
-
