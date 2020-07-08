@@ -1,0 +1,48 @@
+pacstrap
+	base
+	base-devel
+	dmenu
+	firefox
+	git
+	gvim
+	intel-ucode
+	linux
+	linux-firmware
+	man-db
+	man-pages
+	neofetch
+	net-tools
+	networkmanager
+	network-manager-applet
+	nitrogen
+	noto-fonts
+	openconnect
+	openssh
+	openvpn
+	pavucontrol
+	picom
+	python-pip
+	pulseaudio
+	scrot
+	texlive-core
+	texlive-latexextra
+	tree
+	xdo
+	xorg-server
+	xorg-xinit
+	materia-gtk-theme
+
+INSTALL YAY
+git clone https://aur.archlinux.org/yay
+cd yay
+makepkg -si
+cd ..
+rm -rf yay
+
+yay
+	discord
+	pinta
+	polybar
+	siji-git
+	spotify-tui
+	spotifyd-pulseaudio
