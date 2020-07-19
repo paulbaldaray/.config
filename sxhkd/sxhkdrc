@@ -9,8 +9,8 @@ mod4 + t
 mod4 + {_,shift + }f
 	firefox {_,--private-window}
 
-mod4 + semicolon
-	dmenu_run
+mod4 + {_,shift + }semicolon
+	{dmenu_run,book}
 
 mod4 + v
 	pavucontrol
@@ -57,8 +57,8 @@ mod4 + {h,l}
 mod4 + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-mod4 + Tab
-	bspc desktop -f next.occupied
+mod4 + {_,shift +}Tab
+	bspc desktop -f {next,prev}.occupied
 
 mod4 + z
 	bspc node -t ~fullscreen
