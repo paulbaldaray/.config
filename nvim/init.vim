@@ -30,12 +30,12 @@ endfunction
 call SourceDirectory("~/.config/nvim/lang")
 
 " Terminal Settings
-map <silent> <A-t> :terminal<CR>
+map <silent> <C-t> :terminal<CR>
 autocmd TermOpen * setlocal nonumber norelativenumber modifiable
 tnoremap <Esc> <C-\><C-n>
 
 " Tab Bindings
-noremap <silent> <A-Tab> :tabedit<CR>
+noremap <silent> <A-t> :tabedit<CR>
 noremap <A-1> 1gt
 noremap <A-2> 2gt
 noremap <A-3> 3gt
