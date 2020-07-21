@@ -1,4 +1,4 @@
-let g:tex_flavor='latex'
+let g:tex_flavor = "latex"
 autocmd FileType tex call SetLangTex()
 
 function SetLangTex()
@@ -6,11 +6,10 @@ function SetLangTex()
 	set shiftwidth=2 tabstop=2 expandtab
 	set textwidth=80
 
-	let g:syntastic_tex_checkers = ['pdflatex']
-	" let g:syntastic_tex_checkers = []
+	let g:syntastic_tex_checkers = []
 
-	nnoremap <silent> <buffer> <Esc>b :call CompileLatex() <CR><CR><CR>
-	nnoremap <silent> <buffer> <Esc>o :!open %:p:h:h/bin/%:t:r.pdf <CR><CR>
+	nnoremap <silent> <buffer> <A-b> :call CompileLatex() <CR>
+	nnoremap <silent> <buffer> <A-o> :!open %:p:h:h/bin/%:t:r.pdf <CR>
 	nnoremap <Esc>m :call RepMath() <CR>
 
 endfunction

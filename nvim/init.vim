@@ -20,6 +20,7 @@ colorscheme gruvbox
 set background=dark
 highlight MatchParen ctermbg=blue
 highlight Normal ctermbg=None
+autocmd VimEnter * ColorHighlight
 
 function! SourceDirectory(file)
 	for s:fpath in split(globpath(a:file, '*.vim'), '\n')
@@ -27,6 +28,7 @@ function! SourceDirectory(file)
 	endfor
 endfunction
 
+let g:syntastic_check_on_open = 1
 call SourceDirectory("~/.config/nvim/lang")
 
 " Terminal Settings
