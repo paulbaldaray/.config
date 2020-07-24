@@ -33,7 +33,7 @@ call SourceDirectory("~/.config/nvim/lang")
 
 " Terminal Settings
 map <silent> <C-t> :terminal<CR>
-autocmd TermOpen * setlocal nonumber norelativenumber modifiable
+autocmd TermOpen * setlocal nonumber norelativenumber
 tnoremap <Esc> <C-\><C-n>
 
 " Tab Bindings
@@ -59,5 +59,5 @@ noremap <A-l> <C-w>l
 " Misc Bindings
 noremap <silent> <A-c> :ColorToggle<CR>
 noremap <silent> <A-q> :q<CR>
-map <silent> <A-e> :Explore<CR>
+map <silent> <A-e> :e .<CR>
 map <silent> <A-v> :set number! relativenumber! list! paste!<CR>
