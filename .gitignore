@@ -17,3 +17,6 @@ zoomus.conf
 cef_user_data
 google-chrome
 configstore
+nvim
+htop
+gthumb
