@@ -1,5 +1,4 @@
-set recolor-lightcolor "#151515"
-set recolor-darkcolor "#f2e5bc"
-
+set recolor-lightcolor "#181A1B"
+set recolor-darkcolor "#CBCAC7"
 set recolor
 map <C-i> recolor
