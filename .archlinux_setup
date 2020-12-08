@@ -1,21 +1,21 @@
 pacstrap
 	base
 	base-devel
-	dmenu
+	dhcpcd
 	firefox
 	git
-	gvim
+	vim
 	intel-ucode
+	iwd
 	linux
 	linux-firmware
 	man-db
 	man-pages
 	neofetch
 	net-tools
-	networkmanager
-	network-manager-applet
 	nitrogen
 	noto-fonts
+	materia-gtk-theme
 	openconnect
 	openssh
 	openvpn
@@ -30,7 +30,11 @@ pacstrap
 	xdo
 	xorg-server
 	xorg-xinit
-	materia-gtk-theme
+	zathura
+	zathura-pdf-poppler
+
+MY REPOS
+Bin .config .shell
 
 INSTALL YAY
 git clone https://aur.archlinux.org/yay
