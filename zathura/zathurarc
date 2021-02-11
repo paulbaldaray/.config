@@ -1,4 +1,3 @@
-set recolor-lightcolor "#181A1B"
-set recolor-darkcolor "#CBCAC7"
+set recolor-lightcolor "#282A36"
+set recolor-darkcolor "#e7e7e1"
 set recolor
-map <C-i> recolor
